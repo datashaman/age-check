@@ -16,6 +16,7 @@
       redirectOnFail: '',
       title: 'Age Verification',
       copy: 'This Website requires you to be [21] years or older to enter. Please enter your Date of Birth in the fields below in order to continue:',
+      success: null,
       successMsg: {
         header: 'Success!',
         body: 'You are now being redirected back to the application...'
@@ -131,6 +132,9 @@
               if (settings.redirectTo !== '') {
                 window.location.replace(settings.redirectTo);
               } else {
+                if (settings.success) {
+                  settings.success();
+                }
                 $('.ac-overlay, .ac-container').remove();
               }
             });
