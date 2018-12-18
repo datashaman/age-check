@@ -138,6 +138,9 @@
                   settings.success();
                 }
                 $('.ac-overlay, .ac-container').remove();
+                if (settings.success) {
+                  settings.success();
+                }
               }
             });
           });
