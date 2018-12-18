@@ -134,9 +134,6 @@
               if (settings.redirectTo !== '') {
                 window.location.replace(settings.redirectTo);
               } else {
-                if (settings.success) {
-                  settings.success();
-                }
                 $('.ac-overlay, .ac-container').remove();
                 if (settings.success) {
                   settings.success();
